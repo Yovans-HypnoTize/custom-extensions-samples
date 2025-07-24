@@ -1,0 +1,128 @@
+/* Base Theme Variables */
+:root {
+  --bg: #121212;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --text: #ffffff;
+  --accent: #7f5af0;
+  --hover-bg: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.15);
+  --popup-border: 1px solid rgba(255, 255, 255, 0.2); /* Popup border */
+}
+
+/* Light Theme Overrides */
+body.light {
+  --bg: #eeebeb;
+  --card-bg: #ffffff;
+  --text: #1a1a1a;
+  --accent: #6c63ff;
+  --hover-bg: #ecebeb;
+  --border: #e0e0e0;
+  --popup-border: 1px solid rgba(0, 0, 0, 0.1); /* Popup border for light theme */
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 16px;
+  width: 280px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--text);
+  transition: transform 0.2s;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.card.whatsapp:hover {
+  background-color: #dcf8c6; /* WhatsApp green tone */
+  color: #007B3A; /* WhatsApp text color */
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.card.linkedin:hover {
+  background-color: #e8f4fd; /* LinkedIn blue tone */
+  color: #0077B5; /* LinkedIn text color */
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.card.total {
+  grid-column: span 2;
+  background: var(--accent);
+  color: #fff;
+}
+
+.title {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.count {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  margin: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background: #5b4ce6;
+  transform: scale(1.03);
+}

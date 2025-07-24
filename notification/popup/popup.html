@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notification Tracker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>📬 Notifications</h1>
+      <button id="theme-toggle" title="Toggle theme">🌙</button>
+    </header>
+
+    <div class="summary">
+      <div class="card whatsapp">
+        <span class="title">WhatsApp</span>
+        <span id="whatsapp-count" class="count">0</span>
+      </div>
+      <div class="card linkedin">
+        <span class="title">LinkedIn</span>
+        <span id="linkedin-count" class="count">0</span>
+      </div>
+      <div class="card total">
+        <span class="title">Total</span>
+        <span id="total-count" class="count">0</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="check-now-btn">🔄 Check Now</button>
+      <button id="clear-btn">🧹 Clear</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
